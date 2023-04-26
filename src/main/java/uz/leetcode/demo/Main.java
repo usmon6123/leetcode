@@ -4,29 +4,31 @@ import uz.leetcode.demo.Ace_Coding_Interview_with_75_Qs.P1768MergeStringsAlterna
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class Main {
 
 
     public static void main(String[] args) {
-        P1768MergeStringsAlternately p = new P1768MergeStringsAlternately();
-
-        System.out.println(p.mergeAlternately("abcd","efghijkl"));
 
     }
+
+
+
     public static int findGCD(int[] nums) {
-        int min = nums[0],max = nums[0];
+        int min = nums[0], max = nums[0];
         for (int i = 0; i < nums.length; i++) {
-            if(nums[i] > max) max = nums[i];
-            if(nums[i] < min) min = nums[i];
+            if (nums[i] > max) max = nums[i];
+            if (nums[i] < min) min = nums[i];
         }
-        return ekub(max,min);
+        return ekub(max, min);
     }
 
     private static int ekub(int a, int b) {
-        if(b == 0)return a;
-        else return ekub(b,a % b);
+        if (b == 0) return a;
+        else return ekub(b, a % b);
     }
 
     public static void duplicateZeros(int[] arr) {
